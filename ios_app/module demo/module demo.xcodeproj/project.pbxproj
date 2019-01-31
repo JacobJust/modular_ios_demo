@@ -15,6 +15,8 @@
 		820075B22203006B00D8F615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820075B02203006B00D8F615 /* LaunchScreen.storyboard */; };
 		820075BD2203006B00D8F615 /* module_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075BC2203006B00D8F615 /* module_demoTests.swift */; };
 		820075C82203006B00D8F615 /* module_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075C72203006B00D8F615 /* module_demoUITests.swift */; };
+		820075D6220303C400D8F615 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075D5220303C400D8F615 /* UIViewExtention.swift */; };
+		820075D82203043900D8F615 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075D72203043900D8F615 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		820075C32203006B00D8F615 /* module demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "module demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		820075C72203006B00D8F615 /* module_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = module_demoUITests.swift; sourceTree = "<group>"; };
 		820075C92203006B00D8F615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820075D5220303C400D8F615 /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		820075D72203043900D8F615 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		820075A62203006B00D8F615 /* module demo */ = {
 			isa = PBXGroup;
 			children = (
+				820075D72203043900D8F615 /* Colors.swift */,
+				820075D5220303C400D8F615 /* UIViewExtention.swift */,
 				820075A72203006B00D8F615 /* AppDelegate.swift */,
 				820075A92203006B00D8F615 /* ViewController.swift */,
 				6AC7ABA22203025C007F282E /* TabBarController.swift */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC7ABA32203025C007F282E /* TabBarController.swift in Sources */,
+				820075D6220303C400D8F615 /* UIViewExtention.swift in Sources */,
+				820075D82203043900D8F615 /* Colors.swift in Sources */,
 				820075AA2203006B00D8F615 /* ViewController.swift in Sources */,
 				820075A82203006B00D8F615 /* AppDelegate.swift in Sources */,
 			);
