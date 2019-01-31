@@ -51,9 +51,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         buttonLogin.setTitle("LOGIN", for: .normal)
         buttonLogin.setTitleColor(UIColor.blue, for: .normal)
         
-        view.backgroundColor = .yellow
+        buttonLogin.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(performLogin)))
+    }
+    
+    @objc
+    public func performLogin() {
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
