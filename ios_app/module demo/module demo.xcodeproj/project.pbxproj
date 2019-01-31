@@ -17,6 +17,7 @@
 		820075C82203006B00D8F615 /* module_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075C72203006B00D8F615 /* module_demoUITests.swift */; };
 		820075D6220303C400D8F615 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075D5220303C400D8F615 /* UIViewExtention.swift */; };
 		820075D82203043900D8F615 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075D72203043900D8F615 /* Colors.swift */; };
+		820075DA220307A600D8F615 /* sonic-burger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 820075D9220307A600D8F615 /* sonic-burger.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		820075C92203006B00D8F615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		820075D5220303C400D8F615 /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		820075D72203043900D8F615 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		820075D9220307A600D8F615 /* sonic-burger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sonic-burger.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		820075A62203006B00D8F615 /* module demo */ = {
 			isa = PBXGroup;
 			children = (
+				820075D9220307A600D8F615 /* sonic-burger.jpg */,
 				820075D72203043900D8F615 /* Colors.swift */,
 				820075D5220303C400D8F615 /* UIViewExtention.swift */,
 				820075A72203006B00D8F615 /* AppDelegate.swift */,
@@ -241,6 +244,7 @@
 				820075B22203006B00D8F615 /* LaunchScreen.storyboard in Resources */,
 				820075AF2203006B00D8F615 /* Assets.xcassets in Resources */,
 				820075AD2203006B00D8F615 /* Main.storyboard in Resources */,
+				820075DA220307A600D8F615 /* sonic-burger.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
