@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         topView.margin(left: 0, top: 0, right: 0, bottom: 0)
         topView.backgroundColor = UIColor.white
         
+        view.backgroundColor = .yellow
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

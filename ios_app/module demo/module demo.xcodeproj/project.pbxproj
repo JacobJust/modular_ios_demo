@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6AC7ABA32203025C007F282E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7ABA22203025C007F282E /* TabBarController.swift */; };
+		6AC7ABA72203095D007F282E /* ViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7ABA62203095D007F282E /* ViewControllerB.swift */; };
+		6AC7ABA922030B74007F282E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7ABA822030B71007F282E /* Assets.xcassets */; };
 		820075A82203006B00D8F615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075A72203006B00D8F615 /* AppDelegate.swift */; };
 		820075AA2203006B00D8F615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075A92203006B00D8F615 /* ViewController.swift */; };
 		820075AD2203006B00D8F615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820075AB2203006B00D8F615 /* Main.storyboard */; };
-		820075AF2203006B00D8F615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820075AE2203006B00D8F615 /* Assets.xcassets */; };
 		820075B22203006B00D8F615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820075B02203006B00D8F615 /* LaunchScreen.storyboard */; };
 		820075BD2203006B00D8F615 /* module_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075BC2203006B00D8F615 /* module_demoTests.swift */; };
 		820075C82203006B00D8F615 /* module_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820075C72203006B00D8F615 /* module_demoUITests.swift */; };
@@ -38,11 +39,12 @@
 
 /* Begin PBXFileReference section */
 		6AC7ABA22203025C007F282E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6AC7ABA62203095D007F282E /* ViewControllerB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerB.swift; sourceTree = "<group>"; };
+		6AC7ABA822030B71007F282E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820075A42203006B00D8F615 /* module demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "module demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		820075A72203006B00D8F615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		820075A92203006B00D8F615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		820075AC2203006B00D8F615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		820075AE2203006B00D8F615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820075B12203006B00D8F615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820075B32203006B00D8F615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		820075B82203006B00D8F615 /* module demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "module demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,10 +110,11 @@
 				820075A72203006B00D8F615 /* AppDelegate.swift */,
 				820075A92203006B00D8F615 /* ViewController.swift */,
 				6AC7ABA22203025C007F282E /* TabBarController.swift */,
+				6AC7ABA822030B71007F282E /* Assets.xcassets */,
 				820075AB2203006B00D8F615 /* Main.storyboard */,
-				820075AE2203006B00D8F615 /* Assets.xcassets */,
 				820075B02203006B00D8F615 /* LaunchScreen.storyboard */,
 				820075B32203006B00D8F615 /* Info.plist */,
+				6AC7ABA62203095D007F282E /* ViewControllerB.swift */,
 			);
 			path = "module demo";
 			sourceTree = "<group>";
@@ -239,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				820075B22203006B00D8F615 /* LaunchScreen.storyboard in Resources */,
-				820075AF2203006B00D8F615 /* Assets.xcassets in Resources */,
+				6AC7ABA922030B74007F282E /* Assets.xcassets in Resources */,
 				820075AD2203006B00D8F615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +271,7 @@
 				6AC7ABA32203025C007F282E /* TabBarController.swift in Sources */,
 				820075D6220303C400D8F615 /* UIViewExtention.swift in Sources */,
 				820075D82203043900D8F615 /* Colors.swift in Sources */,
+				6AC7ABA72203095D007F282E /* ViewControllerB.swift in Sources */,
 				820075AA2203006B00D8F615 /* ViewController.swift in Sources */,
 				820075A82203006B00D8F615 /* AppDelegate.swift in Sources */,
 			);
