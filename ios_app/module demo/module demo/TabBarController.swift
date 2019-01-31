@@ -2,7 +2,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    let viewControllerA = ViewController()
+    let viewControllerA = ViewControllerA()
     let viewControllerB = ViewControllerB()
     
     override func viewDidLoad() {
