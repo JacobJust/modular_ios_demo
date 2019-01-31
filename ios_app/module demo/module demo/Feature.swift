@@ -8,9 +8,26 @@
 
 import UIKit
 
-public protocol FeatureContract {
-    func tabBarName() -> String
-    func getImageName() -> String
-    func getMainViewController() -> UIViewController
-    func identifier() -> String
+@objc
+public class FeatureContract: NSObject {
+    
+    public required override init() {
+        super.init()
+    }
+    
+    func tabBarName() -> String {
+        return nil!
+    }
+    
+    func getImageName() -> String {
+        return nil!
+    }
+    
+    func getMainViewController() -> UIViewController {
+        return nil!
+    }
+    
+    func identifier() -> String {
+        return nil!
+    }
 }

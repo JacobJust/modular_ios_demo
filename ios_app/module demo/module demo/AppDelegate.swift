@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ComponentServiceProvider 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //TODO: discover components instead
-        componentService.registerFeature(FeatureA())
-        componentService.registerFeature(FeatureB())
-        componentService.registerFeature(FeatureC())
+        let list = subclasses(of: FeatureContract.self)
         
+        for feature in list {
+            componentService.registerFeature(feature.init())
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = ViewController()
@@ -32,6 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ComponentServiceProvider 
         return true
     }
 
+    func subclasses<T>(of theClass: T) -> [T] {
+        var count: UInt32 = 0, result: [T] = []
+        let allClasses = objc_copyClassList(&count)!
+        
+        for n in 0 ..< count {
+            let someClass: AnyClass = allClasses[Int(n)]
+            guard let someSuperClass = class_getSuperclass(someClass), String(describing: someSuperClass) == String(describing: theClass) else { continue }
+            result.append(someClass as! T)
+        }
+        
+        return result
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

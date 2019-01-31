@@ -4,19 +4,19 @@ import Foundation
 import UIKit
 
 public class FeatureB: FeatureContract {
-    public func tabBarName() -> String {
+    public override func tabBarName() -> String {
         return "Burger"
     }
     
-    public func getImageName() -> String {
+    public override func getImageName() -> String {
         return "icn_tab_burger"
     }
     
-    public func getMainViewController() -> UIViewController {
+    public override func getMainViewController() -> UIViewController {
         return ViewControllerB()
     }
     
-    public func identifier() -> String {
+    public override func identifier() -> String {
         return "B"
     }
     

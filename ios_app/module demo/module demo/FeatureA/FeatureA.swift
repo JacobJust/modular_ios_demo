@@ -3,19 +3,25 @@
 import Foundation
 import UIKit
 
+
 public class FeatureA: FeatureContract {
-    public func tabBarName() -> String {
+    @objc
+    public override func tabBarName() -> String {
         return "Pommes"
     }
     
-    public func getImageName() -> String {
+    @objc
+    public override func getImageName() -> String {
         return "icn_pommes"
     }
     
-    public func getMainViewController() -> UIViewController {
+    @objc
+    public override func getMainViewController() -> UIViewController {
         return ViewControllerA()
     }
-    public func identifier() -> String {
+    
+    @objc
+    public override func identifier() -> String {
         return "A"
     }
     
