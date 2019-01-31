@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UserServiceProvider {
 
+    lazy var userService: UserService = {
+        return self.getUserService()
+    }()
+    
+    
     private lazy var inputUserName = UITextField()
     private lazy var inputPassword = UITextField()
     private lazy var buttonLogin = UIButton()
@@ -56,6 +61,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc
     public func performLogin() {
+        if let user = inputUserName.text {
+            userService.setUser(user: user)
+        }
+        
         let tabBar = TabBarController()
         tabBar.title = "tabbar"
         tabBar.modalTransitionStyle = .crossDissolve

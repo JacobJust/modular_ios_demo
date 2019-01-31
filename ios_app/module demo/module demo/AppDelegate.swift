@@ -9,12 +9,22 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ComponentServiceProvider {
 
     var window: UIWindow?
+    
+    lazy var componentService: ComponentService = {
+       return self.getComponentService()
+    }()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //TODO: discover components instead
+        componentService.registerFeature(FeatureA())
+        componentService.registerFeature(FeatureB())
+        componentService.registerFeature(FeatureC())
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = ViewController()
         window!.makeKeyAndVisible()
