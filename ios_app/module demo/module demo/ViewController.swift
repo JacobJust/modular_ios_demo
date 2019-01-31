@@ -12,6 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let topView = UIView()
+        
+        view.addSubview(topView)
+        
+        topView.margin(left: 0, top: 0, right: 0, bottom: 0)
+        topView.backgroundColor = UIColor.white
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
