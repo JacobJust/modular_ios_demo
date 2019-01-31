@@ -56,7 +56,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc
     public func performLogin() {
+        let tabBar = TabBarController()
+        tabBar.title = "tabbar"
+        tabBar.modalTransitionStyle = .crossDissolve
         
+        self.present(tabBar, animated: true)
     }
 
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
