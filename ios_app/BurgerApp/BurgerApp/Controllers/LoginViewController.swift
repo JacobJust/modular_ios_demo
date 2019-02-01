@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
    
     Auth.auth().addStateDidChangeListener() { auth, user in
       if user != nil {
+        User.saveEmail(email: user?.email ?? "")
         self.performSegue(withIdentifier: self.loginToList, sender: nil)
         self.textFieldLoginEmail.text = nil
         self.textFieldLoginPassword.text = nil

@@ -1,0 +1,6 @@
+module Pods_BurgerApp {
+  umbrella header "Pods-BurgerApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

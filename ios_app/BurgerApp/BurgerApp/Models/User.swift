@@ -43,4 +43,19 @@ struct User {
     self.uid = uid
     self.email = email
   }
+    
+    
+    static func saveEmail(email: String) {
+        UserDefaults.standard.set(email, forKey: "userEmail")
+        UserDefaults.standard.synchronize()
+    }
+    
+    static func getCurrentUserEmail() -> String? {
+        return UserDefaults.standard.string(forKey: "userEmail")
+    }
 }
+
+
+
+
+
