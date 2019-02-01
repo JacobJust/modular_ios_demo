@@ -107,7 +107,7 @@ struct Module {
             let path = libUrl.path
             if let handle = dlopen(path, RTLD_LAZY) {
                 
-                if let aClass  = NSClassFromString("WelcomeViewController") as?  AnyClass {
+                if let aClass  = NSClassFromString(self.controllerName) as?  AnyClass {
                     
                     if let myClass = aClass as? NSObjectProtocol {
                         let selector = Selector("controller")
