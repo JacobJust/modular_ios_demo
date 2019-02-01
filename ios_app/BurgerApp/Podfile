@@ -10,4 +10,5 @@ target 'BurgerApp' do
   pod 'Firebase/Storage', :inhibit_warnings => true
   pod 'PKHUD'
   pod 'SDDownloadManager'
+  pod 'Zip'
 end
