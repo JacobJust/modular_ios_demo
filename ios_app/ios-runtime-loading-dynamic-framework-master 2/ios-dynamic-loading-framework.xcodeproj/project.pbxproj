@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A210CA3220456A2005DA49C /* blueburger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A210CA2220456A2005DA49C /* blueburger.jpeg */; };
+		0A210CA7220457FD005DA49C /* Framework2ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A210CA4220457FD005DA49C /* Framework2ViewController.h */; };
+		0A210CA8220457FD005DA49C /* Framework2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A210CA5220457FD005DA49C /* Framework2ViewController.m */; };
+		0A210CA9220457FD005DA49C /* Framework2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A210CA6220457FD005DA49C /* Framework2ViewController.xib */; };
+		0A210CAB22045983005DA49C /* cheeseburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A210CAA22045983005DA49C /* cheeseburger.jpg */; };
 		5F4B9B4B1CEC80AE0096D67C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B9B4A1CEC80AE0096D67C /* main.m */; };
 		5F4B9B4E1CEC80AE0096D67C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B9B4D1CEC80AE0096D67C /* AppDelegate.m */; };
 		5F4B9B511CEC80AE0096D67C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B9B501CEC80AE0096D67C /* ViewController.m */; };
@@ -66,6 +71,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A210CA2220456A2005DA49C /* blueburger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blueburger.jpeg; sourceTree = "<group>"; };
+		0A210CA4220457FD005DA49C /* Framework2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Framework2ViewController.h; path = DynamicFramework2/Framework2ViewController.h; sourceTree = "<group>"; };
+		0A210CA5220457FD005DA49C /* Framework2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Framework2ViewController.m; path = DynamicFramework2/Framework2ViewController.m; sourceTree = "<group>"; };
+		0A210CA6220457FD005DA49C /* Framework2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Framework2ViewController.xib; path = DynamicFramework2/Framework2ViewController.xib; sourceTree = "<group>"; };
+		0A210CAA22045983005DA49C /* cheeseburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheeseburger.jpg; sourceTree = "<group>"; };
 		5F4B9B461CEC80AE0096D67C /* ios-dynamic-loading-framework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-dynamic-loading-framework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4B9B4A1CEC80AE0096D67C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F4B9B4C1CEC80AE0096D67C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 		5F4B9B6E1CEC80BF0096D67C /* DynamicFramework1 */ = {
 			isa = PBXGroup;
 			children = (
+				0A210CA2220456A2005DA49C /* blueburger.jpeg */,
 				5F4B9B701CEC80EF0096D67C /* CASHello.h */,
 				5F4B9B711CEC80EF0096D67C /* CASHello.m */,
 				67E0542022043BF800B14D57 /* WelcomeViewController.h */,
@@ -198,8 +209,12 @@
 		5F4B9B6F1CEC80CC0096D67C /* DynamicFramework2 */ = {
 			isa = PBXGroup;
 			children = (
+				0A210CAA22045983005DA49C /* cheeseburger.jpg */,
 				5F4B9B721CEC81090096D67C /* CASHello.h */,
 				5F4B9B731CEC81090096D67C /* CASHello.m */,
+				0A210CA4220457FD005DA49C /* Framework2ViewController.h */,
+				0A210CA5220457FD005DA49C /* Framework2ViewController.m */,
+				0A210CA6220457FD005DA49C /* Framework2ViewController.xib */,
 			);
 			name = DynamicFramework2;
 			sourceTree = "<group>";
@@ -240,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F4B9BE31CEC88C00096D67C /* CASHello.h in Headers */,
+				0A210CA7220457FD005DA49C /* Framework2ViewController.h in Headers */,
 				5F4B9BE81CEC8C6B0096D67C /* DynamicFramework2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A210CA3220456A2005DA49C /* blueburger.jpeg in Resources */,
 				67E0542822044EFC00B14D57 /* WelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +414,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A210CA9220457FD005DA49C /* Framework2ViewController.xib in Resources */,
+				0A210CAB22045983005DA49C /* cheeseburger.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A210CA8220457FD005DA49C /* Framework2ViewController.m in Sources */,
 				5F4B9BE21CEC88BC0096D67C /* CASHello.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
