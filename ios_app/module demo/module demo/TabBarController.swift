@@ -1,18 +1,35 @@
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, ComponentServiceProvider, UserServiceProvider {
     
-    let viewControllerA = ViewControllerA()
-    let viewControllerB = ViewControllerB()
+    lazy var componentService: ComponentService = {
+        return self.getComponentService()
+    }()
+    
+    lazy var userService: UserService = {
+        return self.getUserService()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let itemA = UITabBarItem(title: "Tasty burger", image: UIImage(named: "icn_tab_burger"), tag: 0)
-        viewControllerA.tabBarItem = itemA
         
-        let itemB = UITabBarItem(title: "Tasty Fries", image: UIImage(named: "icn_pommes"), tag: 0)
-        viewControllerB.tabBarItem = itemB
-        viewControllers = [viewControllerA, viewControllerB]
+        let features = componentService.getFeatures(featureIdentifier: userService.getFeatureIdentifiers())
+        
+        var controllers: [UIViewController] = []
+        
+        var count = 0
+        
+        for feature in features {
+            let name = feature.tabBarName()
+            let imageName = feature.getImageName()
+            let viewController = feature.getMainViewController()
+            
+            controllers.append(viewController)
+            
+            viewController.tabBarItem = UITabBarItem(title: name, image: UIImage(named: imageName), tag: count)
+            count = count + 1
+        }
+        
+        viewControllers = controllers
     }
-
 }
