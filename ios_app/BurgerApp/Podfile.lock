@@ -76,6 +76,7 @@ PODS:
   - Nuke (7.5.2)
   - PKHUD (5.2.1)
   - SDDownloadManager (1.0.2)
+  - Zip (1.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - Nuke
   - PKHUD
   - SDDownloadManager
+  - Zip
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -104,6 +106,7 @@ SPEC REPOS:
     - Nuke
     - PKHUD
     - SDDownloadManager
+    - Zip
 
 SPEC CHECKSUMS:
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
@@ -122,7 +125,8 @@ SPEC CHECKSUMS:
   Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   SDDownloadManager: bff6dd1dee3889614ac6193741b770fd5e1d9b55
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 46ea1fe32f776300abd87ffa57a93fa41c544268
+PODFILE CHECKSUM: 3be855aad661142dac5b9d95bc153fc8ab7b2769
 
 COCOAPODS: 1.5.3

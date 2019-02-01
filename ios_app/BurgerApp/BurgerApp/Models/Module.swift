@@ -28,6 +28,9 @@
 
 import Foundation
 import Firebase
+import Zip
+import SDDownloadManager
+
 
 struct Module {
   
@@ -41,7 +44,7 @@ struct Module {
     let moduleResource: String?
   
     func isLibrairyDownloaded() -> Bool {
-        if let url = localLibrairy() {
+        if let url = zipFileLibrairy() {
             return FileManager.default.fileExists(atPath: url.path )
         }
         return false
@@ -49,18 +52,72 @@ struct Module {
     }
     
     func removeLibrairy() {
-        if let url = localLibrairy() {
+        if let url = zipFileLibrairy() {
             try? FileManager.default.removeItem(at: url)
         }
     }
     
-    func localLibrairy() -> URL? {
+    func zipFileLibrairy() -> URL? {
         guard let moduleResource = moduleResource else { return nil }
         let cacheURL =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first! as URL
         let url = URL(string: moduleResource)!
         let result = cacheURL.appendingPathComponent(url.lastPathComponent)
         return result
         
+    }
+    
+    
+    func downloadLibrairyResource( progressBlock:@escaping (_ progress : CGFloat) -> Void,
+                           onCompletion completionBlock:@escaping (_ error : Error?, _ fileUrl:URL?) -> Void) {
+        let urlRequest = URLRequest(url: URL(string: moduleResource!)!)
+        
+        let name = urlRequest.url?.lastPathComponent
+        SDDownloadManager.shared.dowloadFile(withRequest: urlRequest, inDirectory: nil,withName:name,  onProgress: { (progress) in
+            progressBlock(progress)
+        }) { (error, url) in
+            if let url = url {
+                do {
+                    
+                   let result = try Zip.quickUnzipFile(url)
+                    completionBlock(nil, result)
+                }
+                catch {
+                    completionBlock(error, nil)
+                    print(error.localizedDescription)
+                }
+                
+            }
+            else { completionBlock(error, nil) }
+            
+        }
+    }
+    
+   
+    func localLibrairy() -> URL? {
+        guard let moduleResource = moduleResource else { return nil }
+        let cacheURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
+        let url = URL(string: moduleResource)!
+        let result = cacheURL.appendingPathComponent(url.lastPathComponent).deletingPathExtension()
+        return result
+    }
+    
+    func getController() -> UIViewController? {
+        if   let libriaryContainer = localLibrairy() {
+            let libUrl = libriaryContainer.appendingPathComponent(libriaryContainer.lastPathComponent)
+            let path = libUrl.path
+            if let handle = dlopen(path, RTLD_LAZY) {
+                
+                if let aClass  = NSClassFromString(self.controllerName) as?  AnyClass {
+                    
+                    if let myClass = aClass as? NSObjectProtocol {
+                        let selector = Selector("controller")
+                        let controller = myClass.perform(selector).takeUnretainedValue()
+                        return controller as! UIViewController
+                    }
+                }
+            }
+        }
+        return nil
     }
     
    

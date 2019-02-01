@@ -30,9 +30,6 @@ import UIKit
 import Firebase
 import Nuke
 import PKHUD
-import AVKit
-import SDDownloadManager
-import Darwin
 
 class ModuleListTableViewController: UITableViewController {
 
@@ -132,7 +129,9 @@ class ModuleListTableViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
    
     if module.isLibrairyDownloaded(), let url = module.localLibrairy() {
-        loadLibrairy(url: url)
+        if let controller = module.getController() {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
     else {
         downloadResource(module: module, cell: cell)
@@ -143,10 +142,8 @@ class ModuleListTableViewController: UITableViewController {
   }
     
     func downloadResource(module : Module, cell: ModuleTableViewCell) {
-        let urlRequest = URLRequest(url: URL(string: module.moduleResource!)!)
         
-        let name = urlRequest.url?.lastPathComponent
-        SDDownloadManager.shared.dowloadFile(withRequest: urlRequest, inDirectory: nil,withName:name,  onProgress: { (progress) in
+        module.downloadLibrairyResource(progressBlock: { (progress) in
             cell.moduleProgressBar?.progress = Float(progress)
             cell.moduleProgressBar?.isHidden = false
         }) { [weak self]  (error, url) in
@@ -160,6 +157,7 @@ class ModuleListTableViewController: UITableViewController {
                 HUD.flash(.success)
             }
         }
+        
     }
     
 
