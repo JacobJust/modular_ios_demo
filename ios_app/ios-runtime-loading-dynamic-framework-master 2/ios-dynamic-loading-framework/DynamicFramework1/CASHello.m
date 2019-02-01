@@ -16,9 +16,9 @@
     NSLog(@"Loading CASHello in dynamic-framework-1");
 }
 
-+(void)hello
++(NSString *)hello
 {
-    NSLog(@"Hello from CASHello in dynamic-framework-1");
+    return @"Super ca marche" ;
 }
 
 @end

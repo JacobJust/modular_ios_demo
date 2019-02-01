@@ -106,12 +106,13 @@ class ModuleListTableViewController: UITableViewController {
   }
   
   
-//  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//    if editingStyle == .delete {
-//      let groceryItem = items[indexPath.row]
-//      groceryItem.ref?.removeValue()
-//    }
-//  }
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      let module = items[indexPath.row]
+        module.removeLibrairy()
+        self.tableView.reloadData()
+    }
+  }
     
     
     func clearCache() {
@@ -166,10 +167,17 @@ class ModuleListTableViewController: UITableViewController {
         let path = url.path // "/usr/lib/libc.dylib"
         if let handle = dlopen(path, RTLD_LAZY) {
             
-            let myObject : AnyClass? = NSClassFromString("CASHello")
-            
-            Thread.detachNewThreadSelector(Selector("hello"), toTarget:myObject, with: nil)
-        
+            if let aClass  = NSClassFromString("WelcomeViewController") as?  AnyClass {
+                
+                if let myClass = aClass as? NSObjectProtocol {
+                    let selector = Selector("controller")
+                    let controller = myClass.perform(selector).takeUnretainedValue()
+                    self.navigationController?.pushViewController(controller as! UIViewController, animated: true)
+                    print(controller)
+                }
+                
+                
+            }
             
             HUD.flash(.success)
         }

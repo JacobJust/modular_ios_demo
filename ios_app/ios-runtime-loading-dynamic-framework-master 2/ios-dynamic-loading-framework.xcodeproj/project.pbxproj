@@ -22,6 +22,8 @@
 		5F4B9BE81CEC8C6B0096D67C /* DynamicFramework2.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F4B9BD71CEC88A60096D67C /* DynamicFramework2.h */; };
 		5F4B9BEA1CEC8CE50096D67C /* DynamicFramework1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F4B9BBE1CEC86CC0096D67C /* DynamicFramework1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F4B9BEB1CEC8D180096D67C /* DynamicFramework2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F4B9BD51CEC88A50096D67C /* DynamicFramework2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67E0542222043BF800B14D57 /* WelcomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E0542022043BF800B14D57 /* WelcomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67E0542322043BF800B14D57 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0542122043BF800B14D57 /* WelcomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		5F4B9BD51CEC88A50096D67C /* DynamicFramework2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4B9BD71CEC88A60096D67C /* DynamicFramework2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework2.h; sourceTree = "<group>"; };
 		5F4B9BD91CEC88A60096D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67E0542022043BF800B14D57 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = DynamicFramework1/WelcomeViewController.h; sourceTree = "<group>"; };
+		67E0542122043BF800B14D57 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = DynamicFramework1/WelcomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 			children = (
 				5F4B9B701CEC80EF0096D67C /* CASHello.h */,
 				5F4B9B711CEC80EF0096D67C /* CASHello.m */,
+				67E0542022043BF800B14D57 /* WelcomeViewController.h */,
+				67E0542122043BF800B14D57 /* WelcomeViewController.m */,
 			);
 			name = DynamicFramework1;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			files = (
 				5F4B9BCF1CEC87F70096D67C /* CASHello.h in Headers */,
 				5F4B9BE71CEC8C5F0096D67C /* DynamicFramework1.h in Headers */,
+				67E0542222043BF800B14D57 /* WelcomeViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F4B9BCE1CEC87C40096D67C /* CASHello.m in Sources */,
+				67E0542322043BF800B14D57 /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,6 @@
 		645D789F204344160093B00C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645D789E204344160093B00C /* Assets.xcassets */; };
 		645D78A2204344160093B00C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645D78A0204344160093B00C /* LaunchScreen.storyboard */; };
 		649F422020438D1B00B21997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F421D20438D1A00B21997 /* LoginViewController.swift */; };
-		649F422120438D1B00B21997 /* OnlineUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F421E20438D1A00B21997 /* OnlineUsersTableViewController.swift */; };
 		649F422220438D1B00B21997 /* ModuleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F421F20438D1B00B21997 /* ModuleListTableViewController.swift */; };
 		649F422520438D2E00B21997 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F422320438D2E00B21997 /* User.swift */; };
 		649F422620438D2E00B21997 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F422420438D2E00B21997 /* Module.swift */; };
@@ -31,7 +30,6 @@
 		645D78A1204344160093B00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		645D78A3204344160093B00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		649F421D20438D1A00B21997 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		649F421E20438D1A00B21997 /* OnlineUsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineUsersTableViewController.swift; sourceTree = "<group>"; };
 		649F421F20438D1B00B21997 /* ModuleListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleListTableViewController.swift; sourceTree = "<group>"; };
 		649F422320438D2E00B21997 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		649F422420438D2E00B21997 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				67495A2F2203432700FB3E62 /* ModuleTableViewCell.swift */,
 				67DC1A9022030812008EF656 /* KeyboardLayoutConstraint.swift */,
 				649F421D20438D1A00B21997 /* LoginViewController.swift */,
-				649F421E20438D1A00B21997 /* OnlineUsersTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				649F422020438D1B00B21997 /* LoginViewController.swift in Sources */,
-				649F422120438D1B00B21997 /* OnlineUsersTableViewController.swift in Sources */,
 				649F422520438D2E00B21997 /* User.swift in Sources */,
 				649F422220438D1B00B21997 /* ModuleListTableViewController.swift in Sources */,
 				67495A302203432700FB3E62 /* ModuleTableViewCell.swift in Sources */,

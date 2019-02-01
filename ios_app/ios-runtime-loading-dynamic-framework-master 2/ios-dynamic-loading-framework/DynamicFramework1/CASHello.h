@@ -11,6 +11,6 @@
 @interface CASHello : NSObject
 
 -(NSString *)description;
-+(void)hello;
++(NSString *)hello;
 
 @end

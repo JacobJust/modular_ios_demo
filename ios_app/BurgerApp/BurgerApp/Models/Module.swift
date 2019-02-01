@@ -48,6 +48,12 @@ struct Module {
         
     }
     
+    func removeLibrairy() {
+        if let url = localLibrairy() {
+            try? FileManager.default.removeItem(at: url)
+        }
+    }
+    
     func localLibrairy() -> URL? {
         guard let moduleResource = moduleResource else { return nil }
         let cacheURL =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first! as URL
