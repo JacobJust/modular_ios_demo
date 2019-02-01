@@ -3,12 +3,14 @@ platform :ios, '11.0'
 inhibit_all_warnings!
 
 target 'BurgerApp' do
-  pod 'Nuke'
-  pod 'Firebase/Core', :inhibit_warnings => true
-  pod 'Firebase/Database', :inhibit_warnings => true
-  pod 'Firebase/Auth', :inhibit_warnings => true
-  pod 'Firebase/Storage', :inhibit_warnings => true
-  pod 'PKHUD'
-  pod 'SDDownloadManager'
-  pod 'Zip'
+    pod 'Nuke'
+    pod 'Firebase/Core', :inhibit_warnings => true
+    pod 'Firebase/Database', :inhibit_warnings => true
+    pod 'Firebase/Auth', :inhibit_warnings => true
+    pod 'Firebase/Storage', :inhibit_warnings => true
+    pod 'PKHUD'
+    pod 'SDDownloadManager'
+    pod 'Zip'
+    pod 'MaterialComponents/ShadowElevations', '67.2.0'
+    pod 'MaterialComponents/ShadowLayer', '67.2.0'
 end

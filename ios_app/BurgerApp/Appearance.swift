@@ -26,5 +26,12 @@ struct Appearance {
         navAppearance.titleTextAttributes = [
             NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        let barButtonAppearance = UIBarButtonItem.appearance()
+        barButtonAppearance.tintColor = .white
+        UIButton.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).tintColor = .white
+        barButtonAppearance.setTitleTextAttributes(
+            [NSAttributedStringKey.foregroundColor: UIColor.white],
+            for: .normal)
+        
     }
 }

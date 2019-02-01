@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E8D06E9A455E48920E05C4B221F50D5"
-               BlueprintName = "Pods-BurgerApp"
+               BlueprintIdentifier = "8D72027AF0EEC5AB9F4349133A186A1B"
+               BlueprintName = "MaterialComponents"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-BurgerApp.a">
+               BuildableName = "libMaterialComponents.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
