@@ -24,6 +24,7 @@
 		5F4B9BEB1CEC8D180096D67C /* DynamicFramework2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F4B9BD51CEC88A50096D67C /* DynamicFramework2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E0542222043BF800B14D57 /* WelcomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E0542022043BF800B14D57 /* WelcomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E0542322043BF800B14D57 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0542122043BF800B14D57 /* WelcomeViewController.m */; };
+		67E0542822044EFC00B14D57 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E0542722044EFC00B14D57 /* WelcomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		5F4B9BD91CEC88A60096D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E0542022043BF800B14D57 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = DynamicFramework1/WelcomeViewController.h; sourceTree = "<group>"; };
 		67E0542122043BF800B14D57 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = DynamicFramework1/WelcomeViewController.m; sourceTree = "<group>"; };
+		67E0542722044EFC00B14D57 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = DynamicFramework1/WelcomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				5F4B9B711CEC80EF0096D67C /* CASHello.m */,
 				67E0542022043BF800B14D57 /* WelcomeViewController.h */,
 				67E0542122043BF800B14D57 /* WelcomeViewController.m */,
+				67E0542722044EFC00B14D57 /* WelcomeViewController.xib */,
 			);
 			name = DynamicFramework1;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 					};
 					5F4B9BBD1CEC86CC0096D67C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1010;
 					};
 					5F4B9BD41CEC88A50096D67C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -385,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E0542822044EFC00B14D57 /* WelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +611,7 @@
 		5F4B9BC81CEC86CD0096D67C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -617,6 +623,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carminestudios.DynamicFramework1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -625,6 +633,7 @@
 		5F4B9BC91CEC86CD0096D67C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -636,6 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carminestudios.DynamicFramework1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

@@ -14,14 +14,17 @@
 @end
 
 @implementation ViewController
-
+- (IBAction)loadD1ButtonPressed:(id)sender {
+    [self loadCASHelloFromDynamicFramework1];
+}
+    
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     //Loading the first dynamic library here works fine :)
     NSLog(@"Before referencing CASHello in DynamicFramework1");
-    [self loadCASHelloFromDynamicFramework1];
+    
     
     /*
      Loading the second framework will give a message in the console saying that both classes will be loaded and referencing the class will result in undefined behavior.
@@ -36,14 +39,14 @@
 {
     void *framework1Handle = dlopen("DynamicFramework1.framework/DynamicFramework1", RTLD_LAZY);
     
-    if (NSClassFromString(@"CASHello"))
+    if (NSClassFromString(@"WelcomeViewController"))
     {
+        UIViewController * controller = [NSClassFromString(@"WelcomeViewController") performSelector: @selector(controller)];
+        [self presentViewController:controller animated:true completion:nil];
+        
         NSLog(@"Loaded CASHello in DynamicFramework1");
     }
-    else
-    {
-        NSLog(@"Could not load CASHello in DynamicFramework1");
-    }
+    
     
     dlclose(framework1Handle);
     

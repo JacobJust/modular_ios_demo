@@ -27,7 +27,9 @@
     
 + (UIViewController *) controller
     {
-        return [[WelcomeViewController alloc] init] ;
+        NSBundle *bundz = [NSBundle bundleForClass:[self class]] ;
+        
+        return [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:bundz] ;
         
     }
     
