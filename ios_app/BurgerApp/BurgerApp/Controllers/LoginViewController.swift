@@ -39,16 +39,16 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var textFieldLoginPassword: UITextField!
   
     @IBOutlet weak var loginButton: UIButton!
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
+
+    @IBOutlet weak var signupButton: UIButton!
+    
   
   // MARK: UIViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view.backgroundColor = Appearance.mainColor
-    loginButton.backgroundColor = Appearance.secondaryColor
+    loginButton.backgroundColor = Appearance.mainColor
+    
    
     Auth.auth().addStateDidChangeListener() { auth, user in
       if user != nil {

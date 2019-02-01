@@ -33,5 +33,7 @@ struct Appearance {
             [NSAttributedStringKey.foregroundColor: UIColor.white],
             for: .normal)
         
+        UITextField.appearance().tintColor = Appearance.mainColor
+        
     }
 }

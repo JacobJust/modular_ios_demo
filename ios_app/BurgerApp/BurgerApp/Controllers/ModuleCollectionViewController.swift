@@ -51,6 +51,15 @@ class ModuleCollectionViewController: UICollectionViewController {
         self.collectionView?.backgroundView = imageView
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear", style: .done, target: self, action: #selector(clearCache))
         
+         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(signout))
+        
+        
+        
+    }
+    
+    @objc func signout() {
+        dismiss(animated: true, completion: nil)
+        try! Auth.auth().signOut()
     }
     
     @objc func clearCache() {
