@@ -11,6 +11,7 @@ import UIKit
 class ModuleTableViewCell: UITableViewCell {
 
     @IBOutlet var moduleTitle: UILabel?
+    @IBOutlet var moduleStatus: UILabel?
     @IBOutlet var moduleIconImageView: UIImageView?
     @IBOutlet var moduleProgressBar: UIProgressView?
     

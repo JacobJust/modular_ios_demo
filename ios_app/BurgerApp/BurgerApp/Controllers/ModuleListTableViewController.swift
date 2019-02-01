@@ -94,11 +94,12 @@ class ModuleListTableViewController: UITableViewController {
     let module = items[indexPath.row]
     
     cell.moduleTitle?.text = module.name
+    cell.moduleStatus?.text = module.isLibrairyDownloaded() ? "Module available" : "Module not download yet"
 
     cell.moduleIconImageView?.setUrlImage(url: URL(string: module.icon))
     cell.moduleProgressBar?.progress = 0
     cell.moduleProgressBar?.isHidden = true
-    cell.accessoryType = module.isLibrairyDownloaded() ? UITableViewCellAccessoryType.checkmark : UITableViewCellAccessoryType.none
+    
    // cell.detailTextLabel?.text =
     
     return cell
